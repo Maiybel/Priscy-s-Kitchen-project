@@ -4,7 +4,38 @@ html {
   padding: 0;
   font-family: Arial, sans-serif;
 }
+/* --nav bar------- */
+nav ul a {
+  text-decoration: none;
+  color: black;
+}
 
+nav ul a:hover {
+  text-decoration: underline;
+}
+
+nav .logo {
+  font-size: 40px;
+  color: black;
+  font-family: "Brush Script MT", cursive;
+  font-weight: lighter;
+  line-height: 80px;
+  padding-left: 10px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ff8000;
+  /* width: 100%; */
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 20px;
+}
 #select-order {
   background-color: #ffd580;
   padding: 20px;
@@ -20,7 +51,7 @@ html {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  max-width: 500px;
+  /* max-width: 500px; */
   width: 100%;
 }
 
@@ -59,6 +90,8 @@ html {
 #order-form {
   display: flex;
   flex-direction: column;
+
+  /* justify-content: right; */
 }
 
 /* #order-form label {
@@ -132,10 +165,79 @@ button:hover {
   button {
     font-size: 20px;
   }
+
+  nav {
+    padding: 0 30px;
+  }
 }
 
 @media (min-width: 992px) {
   .order-container {
     max-width: 700px;
+  }
+}
+
+/* -----footer section--- */
+footer {
+  background-color: #ff8000;
+  color: #070707;
+  padding: 10px 10px;
+  font-size: 14px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+.socials .social-icons i {
+  color: black;
+  font-size: 20px;
+  width: 30px;
+}
+
+.footer-right {
+  text-align: center;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #444040;
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (min-width: 576px) {
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer-left,
+  .footer-right {
+    line-height: 5px;
+  }
+
+  .footer-right {
+    align-self: center;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-content {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .footer-content {
+    max-width: 100%;
+  }
+  .footer-right {
+    padding-left: 0px;
   }
 }

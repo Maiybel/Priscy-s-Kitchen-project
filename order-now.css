@@ -9,11 +9,11 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
-  /* padding: 0 20px; */
 }
 /* --nav bar------- */
 nav ul a {
   text-decoration: none;
+  color: black;
 }
 
 nav ul a:hover {
@@ -26,68 +26,29 @@ nav .logo {
   font-family: "Brush Script MT", cursive;
   font-weight: lighter;
   line-height: 80px;
-  padding-left: 30px;
+  padding-left: 10px;
 }
+
 nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background-color: #ff8000;
-  color: black;
-  box-sizing: border-box;
   width: 100%;
-}
-/* hamburger menu */
-nav ul {
-  position: fixed;
-  width: 60%;
-  height: 60%;
-  background: #ff8000;
-  right: -100%;
-  text-align: center;
-  transition: all 0.5s;
-  /* padding-top: 40px; */
-  z-index: 3;
 }
 
 nav ul li {
-  display: block;
-  margin: 50px 0;
-  line-height: 5px;
-  /* margin-top: 40px; */
-}
-
-nav ul li a {
-  color: black;
-  padding: 7px 13px;
-  border-radius: 3px;
+  display: inline-block;
+  margin: 0 10px;
   font-size: 20px;
-  text-decoration: none;
-  cursor: pointer;
 }
-
-.checkbtn {
-  font-size: 30px;
-  color: black;
-  float: right;
-  line-height: 80px;
-  margin-right: 40px;
-  cursor: pointer;
-  display: block;
-}
-
-#check {
-  display: none;
-}
-
-#check:checked ~ ul {
-  right: 0;
-}
-
-/* Order Section Styling */
+/* ------order section---- */
 #order-section {
   text-align: center;
 }
 
 #order-section h2 {
-  margin-bottom: 20px;
+  margin: 20px 0;
   color: #ff8000;
 }
 
@@ -153,33 +114,80 @@ nav ul li a {
   .order-item {
     max-width: 30%;
   }
+  nav {
+    padding: 0 30px;
+  }
 }
 
 @media (min-width: 992px) {
   .order-item {
     max-width: 22%;
   }
+}
 
-  nav .checkbtn {
-    display: none;
-  }
-  nav {
-    display: flex;
-    align-items: center;
+/* -----footer section--- */
+footer {
+  background-color: #ff8000;
+  color: #070707;
+  padding: 10px 10px;
+  font-size: 14px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 10px; /* Add space between items */
+}
+
+.socials .social-icons i {
+  color: black;
+  font-size: 20px;
+  width: 30px;
+}
+
+.footer-right {
+  text-align: center;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #444040;
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (min-width: 576px) {
+  .footer-content {
+    flex-direction: row;
     justify-content: space-between;
-    padding: 0 20px;
   }
-  nav .logo {
-    font-size: 50px;
-    padding-left: 20px;
+
+  .footer-left,
+  .footer-right {
+    line-height: 1.5; /* Adjusted for better spacing */
   }
-  nav ul {
-    position: static;
-    width: auto;
+
+  .footer-right {
+    align-self: center;
+    width: 100%;
+    text-align: center;
   }
-  nav ul li {
-    display: inline-block;
-    margin: 0 10px;
-    font-size: 20px;
+}
+
+@media (min-width: 768px) {
+  .footer-content {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .footer-content {
+    max-width: 100%;
+  }
+  .footer-right {
+    padding-left: 0px;
   }
 }

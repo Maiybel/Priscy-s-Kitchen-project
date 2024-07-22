@@ -94,10 +94,9 @@
   .carousel-item img,
   .carousel-item video {
     width: 430px;
+    height: 300px;
   }
-  .carousel-item video {
-    height: 290px;
-  }
+
   .carousel {
     max-width: 1200px;
   }
@@ -123,14 +122,23 @@
   }
 
   .testimonial-container {
+    display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
-  }
 
+    /* flex-wrap: wrap; */
+  }
   .testimonial {
     margin: 10px;
-    max-width: 300px; /* Adjusted max-width for better fit */
+    width: 1300px; /* Adjusted max-width for better fit */
+  }
+  #contact form {
+    width: 600px;
+
+    margin: 0 auto;
+  }
+  #contact p {
+    font-size: 20px;
   }
 }
 
