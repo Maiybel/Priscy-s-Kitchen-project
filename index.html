@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chef's Delight</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./media-query.css" />
+  </head>
+  <body>
+    <!-- --------nav bar----- -->
+    <header>
+      <nav>
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">Chef P</label>
+
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="#about-us">About us</a></li>
+          <li><a href="#dishes">Our Dishes</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- home section -->
+    <section class="sub-hero">
+      <div class="overlay"></div>
+      <div class="hero-content">
+        <h2>Enjoy Home-made Nigerian Delicacies</h2>
+        <p>
+          <!-- Discover the true essence of Nigerian cuisine with Priscys Kitchen. -->
+          Enjoy expertly prepared soups and stews, delivered fresh and full of
+          flavor. Savor the tradition in every bite!
+        </p>
+
+        <a href="order-now.html" class="order-button-hero">Order Now</a>
+      </div>
+    </section>
+
+    <!-- --------dishes------ -->
+
+    <section id="dishes">
+      <h2>Our Dishes</h2>
+      <div class="carousel">
+        <button class="carousel-control prev" onclick="prevSlide()">❮</button>
+        <div class="carousel-inner">
+          <div class="carousel-item">
+            <figure>
+              <img
+                src="./images/abraham-owunna-K5HSd7U8tRo-unsplash.jpg"
+                alt="Dish 1"
+              />
+              <figcaption>Dish Name 1</figcaption>
+            </figure>
+          </div>
+          <div class="carousel-item">
+            <figure>
+              <img
+                src="./images/femoree-kn_ANxnwCQ0-unsplash.jpg"
+                alt="Dish 2"
+              />
+              <figcaption>Dish Name 2</figcaption>
+            </figure>
+          </div>
+          <div class="carousel-item">
+            <figure>
+              <img
+                src="./images/keesha-s-kitchen-PqG32DYCTM8-unsplash.jpg"
+                alt="Dish 3"
+              />
+              <figcaption>Dish Name 3</figcaption>
+            </figure>
+          </div>
+          <div class="carousel-item">
+            <figure>
+              <video controls>
+                <source src="dish_video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <figcaption>Dish Video</figcaption>
+            </figure>
+          </div>
+        </div>
+        <button class="carousel-control next" onclick="nextSlide()">❯</button>
+      </div>
+    </section>
+    <!-- --------about us section---- -->
+    <section id="about-us">
+      <div class="container">
+        <h2>About Priscys Kitchen</h2>
+        <div class="content">
+          <img
+            src="./images/keesha-s-kitchen-PqG32DYCTM8-unsplash.jpg"
+            alt="Priscillia"
+            class="about-image"
+          />
+          <div class="text-container">
+            <p class="about-text">
+              Welcome to Priscys Kitchen, your go-to destination for authentic
+              Nigerian delicacies! Founded in 2022 by the talented chef
+              Priscillia, our kitchen is dedicated to bringing the rich flavors
+              of Nigeria right to your doorstep.<br /><br />
+              At Priscys Kitchen, we specialize in crafting delicious soups and
+              stews that capture the essence of traditional Nigerian cuisine.
+              Priscillia’s passion for cooking and her commitment to quality
+              ensure that every dish is prepared with the freshest ingredients
+              and utmost care.<span id="dots">...</span
+              ><span id="more"
+                ><br /><br />
+                Our process is simple and customer-focused: you place an order,
+                and we prepare and deliver your meal, ensuring you enjoy a
+                homemade experience without the hassle. Whether you’re craving
+                the comforting taste of your favorite soup or exploring new
+                Nigerian flavors, Priscys Kitchen is here to satisfy your
+                culinary desires.<br /><br />
+                Join us on this flavorful journey and let us bring the taste of
+                Nigeria to your table. We look forward to serving you!
+              </span>
+            </p>
+            <button onclick="toggleReadMore()" id="readMoreBtn">
+              Read More
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----order section---- -->
+    <section id="order">
+      <div class="order-content">
+        <h2>Craving Delicious Nigerian Delicacies?</h2>
+        <p>
+          Indulge in our mouth-watering soups and stews made fresh just for you.
+          Click below to place your order and experience the best of Nigerian
+          cuisine!
+        </p>
+        <a href="order-now.html" class="order-button">Order Now</a>
+      </div>
+    </section>
+    <!-- --testimonial section--- -->
+    <section id="testimonials">
+      <h2>What Our Customers Are Saying</h2>
+      <div class="testimonial-container">
+        <div class="testimonial">
+          <blockquote>
+            <p>
+              "Absolutely love the dishes from Priscys Kitchen! The flavors are
+              amazing and the service is top-notch."
+            </p>
+            <footer>- @username</footer>
+          </blockquote>
+        </div>
+      </div>
+      <div class="testimonial-container">
+        <div class="testimonial">
+          <blockquote>
+            <p>
+              "The best Nigerian food I’ve ever had. Fast delivery and delicious
+              dishes!"
+            </p>
+            <footer>- @anotherusername</footer>
+          </blockquote>
+        </div>
+      </div>
+      <!-- Add more testimonial-container as needed -->
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-left">
+          <h3>Priscy's Kitchen</h3>
+
+          <p>Abuja, Nigeria</p>
+          <p>Phone: +234 123 456 7890</p>
+        </div>
+      </div>
+      <hr />
+      <div class="footer-right">
+        <p>&copy; 2024 Ezema Mabel</p>
+      </div>
+    </footer>
+    <script src="scripts.js"></script>
+  </body>
+</html>

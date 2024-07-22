@@ -1,0 +1,101 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Confirmation Container Styling */
+.confirmation-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+.confirmation-container h1 {
+  font-size: 24px;
+  color: #ff6600;
+  margin-bottom: 10px;
+}
+
+.confirmation-container p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.confirmation-container h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #ff6600;
+}
+
+.confirmation-container ul {
+  list-style-type: none;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.confirmation-container ul li {
+  margin-bottom: 10px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-button {
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.order-button:hover {
+  background-color: #e55b00;
+}
+
+/* Responsive Design */
+@media (min-width: 576px) {
+  .button-container {
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: 768px) {
+  .confirmation-container {
+    padding: 30px;
+  }
+
+  .confirmation-container h1 {
+    font-size: 28px;
+  }
+
+  .confirmation-container p {
+    font-size: 18px;
+  }
+
+  .confirmation-container h2 {
+    font-size: 24px;
+  }
+}

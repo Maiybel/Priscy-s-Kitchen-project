@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Select Order</title>
+    <link rel="stylesheet" href="select-order.css" />
+  </head>
+  <body>
+    <section id="select-order">
+      <div class="order-container">
+        <img src="../images/Egusi soup.jpg" alt="Egusi soup" />
+        <h2>Egusi Soup</h2>
+        <p>
+          Delicious Egusi soup made with gaot meat, beef, stockfish and dry
+          fish.
+        </p>
+        <hr />
+        <h4>Make your choice</h4>
+        <form id="order-form">
+          <input
+            type="text"
+            placeholder="Name"
+            id="name"
+            name="name"
+            required
+          />
+
+          <input
+            type="tel"
+            id="phone"
+            placeholder="Phone Number"
+            name="phone"
+            required
+          />
+
+          <input
+            type="email"
+            id="email"
+            placeholder="Email"
+            name="email"
+            required
+          />
+          <input
+            type="text"
+            id="delivery"
+            placeholder="Delivery Address"
+            name="delivery"
+            required
+          />
+
+          <!-- <label for="quantity">Quantity:</label> -->
+          <select id="quantity" name="quantity" required>
+            <option value="" disabled selected>Select quantity</option>
+            <option value="13,000">2 Liters</option>
+            <option value="16,000">3 Liters</option>
+            <option value="19,000">5 Liters</option>
+          </select>
+          <hr id="seperate" />
+          <label for="instructions">Special Instructions:</label>
+          <textarea
+            id="instructions"
+            name="instructions"
+            placeholder="Add a note (e.g less salt, more pepper)"
+          ></textarea>
+          <p class="total-price" id="total-price">
+            Total Price: ₦<span id="price-value"></span>
+          </p>
+          <a href="../order-confirmation.html" class="button">Order</a>
+        </form>
+      </div>
+    </section>
+    <script>
+      const quantity = document.getElementById("quantity");
+      const priceDisplay = document.getElementById("price-value");
+
+      quantity.addEventListener("change", function () {
+        priceDisplay.textContent = this.value;
+      });
+    </script>
+  </body>
+</html>

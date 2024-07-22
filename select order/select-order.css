@@ -1,0 +1,141 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+#select-order {
+  background-color: #ffd580;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+}
+
+.order-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+}
+
+.order-container img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.order-container h2 {
+  margin: 10px 0;
+  color: #ff6600;
+}
+
+.order-container p {
+  margin: 10px 0;
+  color: #333;
+}
+
+.order-container hr {
+  margin: 20px 0;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+.order-container #seperate {
+  margin: 10px 0;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+.order-container h4 {
+  color: #ff6600;
+  margin-bottom: 10px;
+}
+
+#order-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* #order-form label {
+  margin: 10px 0 5px;
+  text-align: left;
+} */
+
+#order-form select,
+#order-form textarea,
+#order-form input {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+#order-form select:focus,
+#order-form textarea:focus,
+#order-form input:focus {
+  outline: none;
+  border-color: #ff6600;
+}
+
+.total-price {
+  font-weight: bold;
+  font-size: 20px;
+  color: #ff6600;
+}
+
+.button {
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+button:hover {
+  background-color: #cc5200;
+}
+
+@media (min-width: 576px) {
+  .order-container img {
+    max-width: 90%;
+  }
+
+  #order-form select,
+  #order-form textarea {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) {
+  #select-order {
+    padding: 40px;
+  }
+  .total-price {
+    font-size: 25px;
+  }
+  .order-container h4 {
+    font-size: 20px;
+  }
+  .order-container {
+    padding: 30px;
+  }
+
+  button {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .order-container {
+    max-width: 700px;
+  }
+}
