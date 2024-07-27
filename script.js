@@ -79,3 +79,14 @@ window.addEventListener("resize", () => {
 
 // Initialize the carousel
 showSlide(currentIndex);
+
+// order confirmation
+const quantity = document.getElementById("quantity");
+const priceDisplay = document.getElementById("price-value");
+const dishName = document.querySelector("#ordered").textContent.trim();
+
+quantity.addEventListener("change", function () {
+  priceDisplay.textContent = this.value;
+  document.getElementById("order-form").elements["ordered"].value = dishName;
+  document.getElementById("order-form").elements["price"].value = this.value;
+});

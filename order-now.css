@@ -21,14 +21,20 @@ nav ul a:hover {
 }
 
 nav .logo {
-  font-size: 40px;
+  /* font-size: 40px;
   color: black;
   font-family: "Brush Script MT", cursive;
   font-weight: lighter;
-  line-height: 80px;
+  line-height: 80px; */
   padding-left: 10px;
 }
 
+.logo img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-top: 10px;
+}
 nav {
   display: flex;
   align-items: center;

@@ -1,8 +1,10 @@
-body {
-  font-family: Arial, sans-serif;
+* {
   margin: 0;
   padding: 0;
-  color: #fff;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+body {
 }
 
 /* header {
@@ -23,12 +25,18 @@ nav ul a:hover {
 }
 
 nav .logo {
-  font-size: 40px;
-  color: black;
-  font-family: "Brush Script MT", cursive;
-  font-weight: lighter;
-  line-height: 80px;
+  /* font-size: 40px; */
+  /* color: black; */
+  /* font-family: "Brush Script MT", cursive; */
+  /* font-weight: lighter; */
+  /* line-height: 80px; */
   padding-left: 30px;
+}
+.logo img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-top: 10px;
 }
 nav {
   background-color: #ff8000;
@@ -219,29 +227,6 @@ nav ul li a {
   background-color: #ff9900;
 }
 /* dishes section */
-/* 
-#dishes {
-  padding: 50px 20px;
-  background-color: #f4f4f4;
-}
-
-#dishes h2 {
-  text-align: center;
-  color: #ff6600;
-}
-
-.dishes-content {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.dishes-content img,
-.dishes-content video {
-  width: 250px;
-  margin: 10px;
-  border: 2px solid #ff6600;
-} */
 
 #dishes {
   padding: 50px 20px;
@@ -459,7 +444,9 @@ footer {
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
+  gap: 10px; /* Add space between items */
 }
+
 .socials .social-icons i {
   color: black;
   font-size: 20px;
@@ -485,7 +472,7 @@ hr {
 
   .footer-left,
   .footer-right {
-    line-height: 5px;
+    line-height: 1.5; /* Adjusted for better spacing */
   }
 
   .footer-right {

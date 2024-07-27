@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Order Confirmation</title>
-    <link rel="stylesheet" href="order-cornfirmation.css" />
+    <link rel="stylesheet" href="./order-cornfirmation.css" />
   </head>
   <body>
     <div class="confirmation-container">
@@ -15,18 +15,54 @@
       </p>
       <h2>Your Order Details</h2>
       <ul>
-        <li><strong>Name:</strong> John Doe</li>
-        <li><strong>Phone:</strong> +234 123 456 7890</li>
-        <li><strong>Email:</strong> john.doe@example.com</li>
-        <li>
-          <strong>Delivery Address:</strong> 123 Main Street, Lagos, Nigeria
-        </li>
-        <li><strong>Dish Ordered:</strong> Jollof Rice</li>
+        <!-- Order details will be dynamically inserted here -->
       </ul>
       <div class="button-container">
         <a href="index.html" class="order-button">Go Back Home</a>
         <a href="order-now.html" class="order-button">Make Another Order</a>
       </div>
     </div>
+    <script>
+      function getQueryParams() {
+        const params = new URLSearchParams(window.location.search);
+        return {
+          name: params.get("name"),
+          phone: params.get("phone"),
+          email: params.get("email"),
+          delivery: params.get("delivery"),
+          quantity: params.get("quantity"),
+          dishOrdered: params.get("ordered"),
+          instructions: params.get("instructions"),
+          price: params.get("price"),
+        };
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const params = getQueryParams();
+
+        document.querySelector("ul").innerHTML = `
+    <li><strong>Name:</strong> ${params.name}</li>
+    <li><strong>Phone:</strong> ${params.phone}</li>
+    <li><strong>Email:</strong> ${params.email}</li>
+    <li><strong>Delivery Address:</strong> ${params.delivery}</li>
+    <li><strong>Instructions:</strong> ${params.instructions}</li>
+    <li><strong>Dish Ordered:</strong> ${params.dishOrdered}</li>
+    <li><strong>Quantity Ordered:</strong> ${params.quantity} Liters</li>
+    <li><strong>Total Price:</strong> ₦${params.price}</li>
+  `;
+      });
+
+      const quantity = document.getElementById("quantity");
+      const priceDisplay = document.getElementById("price-value");
+      const dishName = document.querySelector("#ordered").textContent.trim();
+
+      quantity.addEventListener("change", function () {
+        priceDisplay.textContent = this.value;
+        document.getElementById("order-form").elements["ordered"].value =
+          dishName;
+        document.getElementById("order-form").elements["price"].value =
+          this.value;
+      });
+    </script>
   </body>
 </html>

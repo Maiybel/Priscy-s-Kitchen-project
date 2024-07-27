@@ -13,7 +13,9 @@
   <body>
     <header>
       <nav>
-        <label class="logo">Chef P</label>
+        <label class="logo"
+          ><img src="../images/prisy's logo.jpg" alt="logo"
+        /></label>
 
         <ul>
           <li><a href="/">Home</a></li>
@@ -25,13 +27,13 @@
       <div class="order-container">
         <div class="left">
           <img src="../images/Afang soup.jpg" alt="Afang soup" />
-          <h2>Afang Soup</h2>
+        </div>
+        <div class="right">
+          <h2 id="ordered">Afang Soup</h2>
           <p>
             Delicious Afang soup made with goat meat, beef, stockfish, dry fish
             and periwinkle
           </p>
-        </div>
-        <div class="right">
           <hr />
           <h4>Make your choice</h4>
           <form
@@ -84,6 +86,8 @@
               name="instructions"
               placeholder="Add a note (e.g less salt, more pepper)"
             ></textarea>
+            <input type="hidden" name="ordered" value="" />
+            <input type="hidden" name="price" value="" />
             <p class="total-price" id="total-price">
               Total Price: ₦<span id="price-value"></span>
             </p>
@@ -100,24 +104,24 @@
           <h3>Priscy's Kitchen</h3>
 
           <p>Abuja, Nigeria</p>
-          <p>Phone: +234 123 456 7890</p>
+          <p>Phone: +234 707 336 2347</p>
         </div>
         <div class="socials">
           <div class="social-icons">
             <a
-              href="https://x.com/Maiybel_ebele"
+              href="https://x.com/priscys_kitchen"
               target="_blank"
               rel="noopener noreferrer"
               ><i class="fab fa-twitter"></i
             ></a>
             <a
-              href="https://www.linkedin.com/in/mabel-ezema-287940231/"
+              href="https://web.facebook.com/profile.php?id=100077447829457"
               target="_blank"
               rel="noopener noreferrer"
               ><i class="fab fa-linkedin"></i
             ></a>
             <a
-              href="https://github.com/Maiybel"
+              href="https://www.instagram.com/priscys_kitchen/"
               target="_blank"
               rel="noopener noreferrer"
               ><i class="fab fa-github"></i
@@ -133,9 +137,14 @@
     <script>
       const quantity = document.getElementById("quantity");
       const priceDisplay = document.getElementById("price-value");
+      const dishName = document.querySelector("#ordered").textContent.trim();
 
       quantity.addEventListener("change", function () {
         priceDisplay.textContent = this.value;
+        document.getElementById("order-form").elements["ordered"].value =
+          dishName;
+        document.getElementById("order-form").elements["price"].value =
+          this.value;
       });
     </script>
   </body>
