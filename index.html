@@ -235,7 +235,11 @@
         dishes, need assistance with an order, or just want to share your
         experience, our team is here to help.
       </p>
-      <form action="">
+      <form
+        id="contact-form"
+        action="https://formspree.io/f/manwezad"
+        method="POST"
+      >
         <label for="name">Full Name</label>
         <input id="name" name="name" required />
 
@@ -245,7 +249,7 @@
         <label for="message">Your Message</label>
         <textarea id="message" name="message" required></textarea>
 
-        <button type="[^submit](https://submit)">Submit</button>
+        <button type="submit">Submit</button>
       </form>
     </section>
 

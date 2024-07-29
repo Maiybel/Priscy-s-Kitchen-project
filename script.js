@@ -90,3 +90,32 @@ quantity.addEventListener("change", function () {
   document.getElementById("order-form").elements["ordered"].value = dishName;
   document.getElementById("order-form").elements["price"].value = this.value;
 });
+
+// ///// Contact us section
+// document
+//   .getElementById("contact-form")
+//   .addEventListener("submit", function (event) {
+//     event.preventDefault(); // Prevent the default form submission
+
+//     const form = event.target;
+//     const formData = new FormData(form);
+
+//     fetch("https://formspree.io/f/manwezad", {
+//       method: "POST",
+//       body: formData,
+//       headers: {
+//         Accept: "application/json",
+//       },
+//     })
+//       .then((response) => {
+//         if (response.ok) {
+//           alert("d message has been sent successfully!");
+//           form.reset(); // Clear the form
+//         } else {
+//           alert("Oops! There was a problem submitting your form.");
+//         }
+//       })
+//       .catch((error) => {
+//         alert("Oops! There was a problem submitting your form.");
+//       });
+//   });
