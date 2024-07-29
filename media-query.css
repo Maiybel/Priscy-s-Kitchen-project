@@ -30,6 +30,14 @@
   .carousel-item video {
     height: 220px;
   }
+  .sub-hero h2 {
+    font-size: 38px;
+  }
+
+  .sub-hero p {
+    font-size: 20px;
+    line-height: 25px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -54,6 +62,14 @@
     display: inline-block;
     margin: 0 10px;
     font-size: 20px;
+  }
+
+  .sub-hero h2 {
+    font-size: 44px;
+  }
+
+  .sub-hero p {
+    font-size: 24px;
   }
   /* -------about us----- */
   .container {
@@ -141,9 +157,22 @@
   #contact p {
     font-size: 20px;
   }
+  .order-content p {
+    margin: 0 50px;
+    line-height: 25px;
+    margin-bottom: 10px;
+  }
 }
 
 @media (min-width: 1200px) {
+  .sub-hero h2 {
+    font-size: 48px;
+  }
+
+  .sub-hero p {
+    font-size: 26px;
+    line-height: 30px;
+  }
   .carousel-item img,
   .carousel-item video {
     width: 530px;

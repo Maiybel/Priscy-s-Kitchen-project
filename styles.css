@@ -4,8 +4,6 @@
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
-body {
-}
 
 /* header {
   display: flex;
@@ -236,6 +234,7 @@ nav ul li a {
 #dishes h2 {
   text-align: center;
   color: #ff6600;
+  font-size: 24px;
 }
 
 .carousel {
@@ -304,19 +303,20 @@ nav ul li a {
 
 /* ------order section----- */
 #order {
+  color: black;
   padding: 50px 20px;
   background-color: #ff8000; /* Catchy background color */
   text-align: center;
 }
 
 .order-content h2 {
-  color: #fff;
-  font-size: 28px;
+  /* color: #fff; */
+  font-size: 24px;
   margin-bottom: 10px;
 }
 
 .order-content p {
-  color: #fff;
+  /* color: #fff; */
   font-size: 16px;
   margin-bottom: 20px;
 }

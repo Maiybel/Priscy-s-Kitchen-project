@@ -11,7 +11,6 @@
     />
   </head>
   <body>
-    <!-- --------nav bar----- -->
     <header>
       <nav>
         <label class="logo"
@@ -26,17 +25,17 @@
     <section id="select-order">
       <div class="order-container">
         <div class="left">
-          <img src="../images/stew.jpg" alt="Stew" />
+          <img src="../images/Afang soup.jpg" alt="Afang soup" />
         </div>
         <div class="right">
           <h2 id="ordered">Stew</h2>
-          <p>Delicious stew made with goat meat, beef, and chicken.</p>
+          <p>Delicious Stew made with goat meat, beef and chicken.</p>
           <hr />
           <h4>Make your choice</h4>
           <form
             id="order-form"
-            action="../order-confirmation.html"
-            method="get"
+            action="https://formspree.io/f/mnnapyzz"
+            method="POST"
           >
             <input
               type="text"
@@ -66,25 +65,22 @@
               name="delivery"
               required
             />
-
             <select id="quantity" name="quantity" required>
               <option value="" disabled selected>Select quantity</option>
-              <option value="12000">2 Liters</option>
-              <option value="15000">3 Liters</option>
-              <option value="17000">5 Liters</option>
+              <option value="12,000">2 Liters</option>
+              <option value="15,000">3 Liters</option>
+              <option value="17,000">5 Liters</option>
             </select>
-
-            <hr id="separate" />
+            <hr id="seperate" />
             <label for="instructions">Special Instructions:</label>
             <textarea
               id="instructions"
               name="instructions"
-              placeholder="Add a note (e.g. less salt, more pepper)"
+              placeholder="Add a note (e.g less salt, more pepper)"
             ></textarea>
-
             <input type="hidden" name="ordered" value="" />
             <input type="hidden" name="price" value="" />
-
+            <input type="hidden" name="_subject" value="New Order Received!" />
             <p class="total-price" id="total-price">
               Total Price: ₦<span id="price-value"></span>
             </p>
@@ -113,13 +109,13 @@
               href="https://web.facebook.com/profile.php?id=100077447829457"
               target="_blank"
               rel="noopener noreferrer"
-              ><i class="fab fa-linkedin"></i
+              ><i class="fab fa-facebook"></i
             ></a>
             <a
               href="https://www.instagram.com/priscys_kitchen/"
               target="_blank"
               rel="noopener noreferrer"
-              ><i class="fab fa-github"></i
+              ><i class="fab fa-instagram"></i
             ></a>
           </div>
         </div>
@@ -129,18 +125,6 @@
         <p>&copy; 2024 Ezema Mabel</p>
       </div>
     </footer>
-    <script>
-      const quantity = document.getElementById("quantity");
-      const priceDisplay = document.getElementById("price-value");
-      const dishName = document.querySelector("#ordered").textContent.trim();
-
-      quantity.addEventListener("change", function () {
-        priceDisplay.textContent = this.value;
-        document.getElementById("order-form").elements["ordered"].value =
-          dishName;
-        document.getElementById("order-form").elements["price"].value =
-          this.value;
-      });
-    </script>
+    <script src="./order.script.js"></script>
   </body>
 </html>

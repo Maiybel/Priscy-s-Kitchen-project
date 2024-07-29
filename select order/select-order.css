@@ -38,7 +38,7 @@ nav {
 
 nav ul li {
   display: inline-block;
-  margin: 0 10px;
+  margin: 0 20px;
   font-size: 20px;
 }
 #select-order {
@@ -67,6 +67,7 @@ nav ul li {
 }
 
 .order-container h2 {
+  font-size: 30px;
   margin: 10px 0;
   color: #ff6600;
 }

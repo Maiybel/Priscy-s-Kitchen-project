@@ -11,7 +11,6 @@
     />
   </head>
   <body>
-    <!-- --------nav bar----- -->
     <header>
       <nav>
         <label class="logo"
@@ -31,15 +30,15 @@
         <div class="right">
           <h2 id="ordered">Egusi Soup</h2>
           <p>
-            Delicious Egusi soup made with gaot meat, beef, stockfish and dry
+            Delicious Egusi soup made with goat meat, beef, stockfish and dry
             fish.
           </p>
           <hr />
           <h4>Make your choice</h4>
           <form
             id="order-form"
-            action="../order-confirmation.html"
-            method="get"
+            action="https://formspree.io/f/mnnapyzz"
+            method="POST"
           >
             <input
               type="text"
@@ -48,7 +47,6 @@
               name="name"
               required
             />
-
             <input
               type="tel"
               id="phone"
@@ -56,7 +54,6 @@
               name="phone"
               required
             />
-
             <input
               type="email"
               id="email"
@@ -71,8 +68,6 @@
               name="delivery"
               required
             />
-
-            <!-- <label for="quantity">Quantity:</label> -->
             <select id="quantity" name="quantity" required>
               <option value="" disabled selected>Select quantity</option>
               <option value="13,000">2 Liters</option>
@@ -88,6 +83,7 @@
             ></textarea>
             <input type="hidden" name="ordered" value="" />
             <input type="hidden" name="price" value="" />
+            <input type="hidden" name="_subject" value="New Order Received!" />
             <p class="total-price" id="total-price">
               Total Price: ₦<span id="price-value"></span>
             </p>
@@ -101,7 +97,6 @@
       <div class="footer-content">
         <div class="footer-left">
           <h3>Priscy's Kitchen</h3>
-
           <p>Abuja, Nigeria</p>
           <p>Phone: +234 707 336 2347</p>
         </div>
@@ -117,13 +112,13 @@
               href="https://web.facebook.com/profile.php?id=100077447829457"
               target="_blank"
               rel="noopener noreferrer"
-              ><i class="fab fa-linkedin"></i
+              ><i class="fab fa-facebook"></i
             ></a>
             <a
               href="https://www.instagram.com/priscys_kitchen/"
               target="_blank"
               rel="noopener noreferrer"
-              ><i class="fab fa-github"></i
+              ><i class="fab fa-instagram"></i
             ></a>
           </div>
         </div>
@@ -133,18 +128,6 @@
         <p>&copy; 2024 Ezema Mabel</p>
       </div>
     </footer>
-    <script>
-      const quantity = document.getElementById("quantity");
-      const priceDisplay = document.getElementById("price-value");
-      const dishName = document.querySelector("#ordered").textContent.trim();
-
-      quantity.addEventListener("change", function () {
-        priceDisplay.textContent = this.value;
-        document.getElementById("order-form").elements["ordered"].value =
-          dishName;
-        document.getElementById("order-form").elements["price"].value =
-          this.value;
-      });
-    </script>
+    <script src="./order.script.js"></script>
   </body>
 </html>

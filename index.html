@@ -58,17 +58,8 @@
           <div class="carousel-item">
             <figure>
               <img
-                src="./images/abraham-owunna-K5HSd7U8tRo-unsplash.jpg"
-                alt="Dish 1"
-              />
-              <figcaption>Coconut rice</figcaption>
-            </figure>
-          </div>
-          <div class="carousel-item">
-            <figure>
-              <img
                 src="./images/femoree-kn_ANxnwCQ0-unsplash.jpg"
-                alt="Dish 2"
+                alt="Afang soup"
               />
               <figcaption>Pounded yam and Afang soup</figcaption>
             </figure>
@@ -76,15 +67,24 @@
           <div class="carousel-item">
             <figure>
               <img
-                src="./images/keesha-s-kitchen-PqG32DYCTM8-unsplash.jpg"
-                alt="Dish 3"
+                src="./images/Seafood okro.jpg.crdownload"
+                alt="Seafood Okro"
               />
-              <figcaption>Dish Name 3</figcaption>
+              <figcaption>Seafood Okro</figcaption>
             </figure>
           </div>
           <div class="carousel-item">
             <figure>
-              <img src="./images/Banga soup.webp" alt="Baga soup" />
+              <img
+                src="./images/abraham-owunna-K5HSd7U8tRo-unsplash.jpg"
+                alt="Dish 1"
+              />
+              <figcaption>Rice</figcaption>
+            </figure>
+          </div>
+          <div class="carousel-item">
+            <figure>
+              <img src="./images/Banga soup.webp" alt="Banga soup" />
               <figcaption>Banga soup</figcaption>
             </figure>
           </div>
@@ -108,7 +108,7 @@
           </div>
           <div class="carousel-item">
             <figure>
-              <img src="./images/jollof rice.jpg" alt="Jollof rice" />
+              <img src="./images/Jollofrice.jpg" alt="Jollof rice" />
               <figcaption>Jollof rice</figcaption>
             </figure>
           </div>
@@ -116,6 +116,12 @@
             <figure>
               <img src="./images/White soup.jpg" alt="Nsala/white soup" />
               <figcaption>Nsala/White soup</figcaption>
+            </figure>
+          </div>
+          <div class="carousel-item">
+            <figure>
+              <img src="./images/ogbono soup.jpeg" alt="Ogbono soup" />
+              <figcaption>Ogbono soup</figcaption>
             </figure>
           </div>
           <div class="carousel-item">
@@ -136,15 +142,6 @@
               <figcaption>Afang soup</figcaption>
             </figure>
           </div>
-          <div class="carousel-item">
-            <figure>
-              <video controls>
-                <source src="dish_video.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-              <figcaption>Dish Video</figcaption>
-            </figure>
-          </div>
         </div>
         <button class="carousel-control next" onclick="nextSlide()">❯</button>
       </div>
@@ -156,7 +153,7 @@
         <h2>About Priscys Kitchen</h2>
         <div class="content">
           <img
-            src="./images/keesha-s-kitchen-PqG32DYCTM8-unsplash.jpg"
+            src="./images/About us.jpg"
             alt="Priscillia"
             class="about-image"
           />
@@ -232,24 +229,26 @@
     </section>
     <!-- Contact -->
     <section id="contact">
-      <h2>Contact Me</h2>
+      <h2>Contact Us</h2>
       <p>
-        Feel free to reach out to me via the form below or connect through my
-        social media channels.
+        We would love to hear from you! Whether you have a question about our
+        dishes, need assistance with an order, or just want to share your
+        experience, our team is here to help.
       </p>
-      <form>
+      <form action="">
         <label for="name">Full Name</label>
-        <input id="name" />
+        <input id="name" name="name" required />
 
-        <label for="service needed">Email</label>
-        <input id="email" />
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required />
 
         <label for="message">Your Message</label>
-        <textarea id="message"></textarea>
+        <textarea id="message" name="message" required></textarea>
 
-        <button>Submit</button>
+        <button type="[^submit](https://submit)">Submit</button>
       </form>
     </section>
+
     <!-- ----------footer section----- -->
     <footer>
       <div class="footer-content">
@@ -271,13 +270,13 @@
               href="hhttps://web.facebook.com/profile.php?id=100077447829457"
               target="_blank"
               rel="noopener noreferrer"
-              ><i class="fab fa-linkedin"></i
+              ><i class="fab fa-instagram"></i
             ></a>
             <a
               href="https://www.instagram.com/priscys_kitchen/"
               target="_blank"
               rel="noopener noreferrer"
-              ><i class="fab fa-github"></i
+              ><i class="fab fa-facebook"></i
             ></a>
           </div>
         </div>
@@ -287,6 +286,7 @@
         <p>&copy; 2024 Ezema Mabel</p>
       </div>
     </footer>
+
     <script src="script.js"></script>
   </body>
 </html>
