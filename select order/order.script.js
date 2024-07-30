@@ -45,7 +45,9 @@ const priceDisplay = document.getElementById("price-value");
 const dishName = document.querySelector("#ordered").textContent.trim();
 
 quantity.addEventListener("change", function () {
-  priceDisplay.textContent = this.value;
+  // console.log('Quantity' + )
+  const price = `${Number(this.value) * 5000}`;
+  priceDisplay.textContent = price;
   document.getElementById("order-form").elements["ordered"].value = dishName;
-  document.getElementById("order-form").elements["price"].value = this.value;
+  document.getElementById("order-form").elements["price"].value = price;
 });

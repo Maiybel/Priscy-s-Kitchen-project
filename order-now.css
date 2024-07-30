@@ -1,11 +1,10 @@
-/* Basic Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body Styling */
+/* Body Section */
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
@@ -21,11 +20,6 @@ nav ul a:hover {
 }
 
 nav .logo {
-  /* font-size: 40px;
-  color: black;
-  font-family: "Brush Script MT", cursive;
-  font-weight: lighter;
-  line-height: 80px; */
   padding-left: 10px;
 }
 
@@ -58,14 +52,12 @@ nav ul li {
   color: #ff8000;
 }
 
-/* Order Container Styling */
 .order-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-/* Order Item Styling */
 .order-item {
   background-color: #fff;
   border: 1px solid #ddd;
@@ -109,28 +101,6 @@ nav ul li {
   background-color: #e55b00;
 }
 
-/* Media Queries */
-@media (min-width: 576px) {
-  .order-item {
-    max-width: 45%;
-  }
-}
-
-@media (min-width: 768px) {
-  .order-item {
-    max-width: 30%;
-  }
-  nav {
-    padding: 0 30px;
-  }
-}
-
-@media (min-width: 992px) {
-  .order-item {
-    max-width: 22%;
-  }
-}
-
 /* -----footer section--- */
 footer {
   background-color: #ff8000;
@@ -144,7 +114,7 @@ footer {
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-  gap: 10px; /* Add space between items */
+  gap: 10px;
 }
 
 .socials .social-icons i {
@@ -172,7 +142,7 @@ hr {
 
   .footer-left,
   .footer-right {
-    line-height: 1.5; /* Adjusted for better spacing */
+    line-height: 1.5;
   }
 
   .footer-right {
@@ -195,5 +165,26 @@ hr {
   }
   .footer-right {
     padding-left: 0px;
+  }
+}
+/*------ responsiveness section------*/
+@media (min-width: 576px) {
+  .order-item {
+    max-width: 45%;
+  }
+}
+
+@media (min-width: 768px) {
+  .order-item {
+    max-width: 30%;
+  }
+  nav {
+    padding: 0 30px;
+  }
+}
+
+@media (min-width: 992px) {
+  .order-item {
+    max-width: 22%;
   }
 }

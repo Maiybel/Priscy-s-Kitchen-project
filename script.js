@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   navLinks.forEach((link) => {
     link.addEventListener("click", () => {
-      document.getElementById("check").checked = false; // Close the menu
+      document.getElementById("check").checked = false;
     });
   });
 });
@@ -35,9 +35,9 @@ function showSlide(index) {
   const itemsPerView = getItemsPerView();
 
   if (index >= totalSlides - itemsPerView + 1) {
-    currentIndex = totalSlides - itemsPerView; // Stop at the last slide
+    currentIndex = totalSlides - itemsPerView;
   } else if (index < 0) {
-    currentIndex = 0; // Stop at the first slide
+    currentIndex = 0;
   } else {
     currentIndex = index;
   }
@@ -47,7 +47,7 @@ function showSlide(index) {
     ".carousel-inner"
   ).style.transform = `translateX(${offset}%)`;
 
-  // Show or hide arrows
+  // to show or hide side arrows
   document.querySelector(".prev").style.display =
     currentIndex === 0 ? "none" : "block";
   document.querySelector(".next").style.display =
@@ -77,45 +77,42 @@ window.addEventListener("resize", () => {
   showSlide(currentIndex);
 });
 
-// Initialize the carousel
 showSlide(currentIndex);
 
-// order confirmation
-const quantity = document.getElementById("quantity");
-const priceDisplay = document.getElementById("price-value");
-const dishName = document.querySelector("#ordered").textContent.trim();
+// contact us section
+// function submitContactForm() {
+//   console.log("Form submission begun");
+//   const form = document.getElementById("contact-form");
+//   const formData = new FormData(form);
+//   console.log("Form Data", formData);
+//   sendFormData("https://formspree.io/f/manwezad", formData);
+//   console.log("Form Data sent successfully");
+// }
 
-quantity.addEventListener("change", function () {
-  priceDisplay.textContent = this.value;
-  document.getElementById("order-form").elements["ordered"].value = dishName;
-  document.getElementById("order-form").elements["price"].value = this.value;
-});
-
-// ///// Contact us section
-// document
-//   .getElementById("contact-form")
-//   .addEventListener("submit", function (event) {
-//     event.preventDefault(); // Prevent the default form submission
-
-//     const form = event.target;
-//     const formData = new FormData(form);
-
-//     fetch("https://formspree.io/f/manwezad", {
-//       method: "POST",
-//       body: formData,
-//       headers: {
-//         Accept: "application/json",
-//       },
+// function sendFormData(url, formData) {
+//   fetch(url, {
+//     method: "POST",
+//     body: formData,
+//     headers: {
+//       Accept: "application/json",
+//     },
+//   })
+//     .then((response) => {
+//       if (response.ok) {
+//         console.log("Message sent successfully");
+//       } else {
+//         console.log("Form failed to submit");
+//       }
 //     })
-//       .then((response) => {
-//         if (response.ok) {
-//           alert("d message has been sent successfully!");
-//           form.reset(); // Clear the form
-//         } else {
-//           alert("Oops! There was a problem submitting your form.");
-//         }
-//       })
-//       .catch((error) => {
-//         alert("Oops! There was a problem submitting your form.");
-//       });
-//   });
+//     .catch((error) => {
+//       console.log(`Form failed to submit due to error: ${error}`);
+//     });
+// }
+document;
+document
+  .getElementById("contact-form")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+    alert("Your message has been sent!");
+    document.getElementById("contact-form").reset();
+  });

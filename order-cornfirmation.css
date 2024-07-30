@@ -1,11 +1,10 @@
-/* Basic Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body Styling */
+/* Body Section */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -16,7 +15,7 @@ body {
   height: 100vh;
 }
 
-/* Confirmation Container Styling */
+/* Confirmation Container section */
 .confirmation-container {
   background-color: #fff;
   padding: 20px;
@@ -75,7 +74,7 @@ body {
   background-color: #e55b00;
 }
 
-/* Responsive Design */
+/* Responsiveess settings */
 @media (min-width: 576px) {
   .button-container {
     justify-content: space-around;

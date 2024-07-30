@@ -5,14 +5,6 @@
   font-family: Arial, sans-serif;
 }
 
-/* header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: #000;
-  color: #ff6600;
-} */
 /* --nav bar------- */
 nav ul a {
   text-decoration: none;
@@ -51,7 +43,7 @@ nav ul {
   right: -100%;
   text-align: center;
   transition: all 0.5s;
-  /* padding-top: 40px; */
+
   z-index: 3;
 }
 
@@ -59,7 +51,6 @@ nav ul li {
   display: block;
   margin: 50px 0;
   line-height: 5px;
-  /* margin-top: 40px; */
 }
 
 nav ul li a {
@@ -89,7 +80,7 @@ nav ul li a {
   right: 0;
 }
 
-/* home section */
+/* -----home section----------- */
 .sub-hero {
   position: relative;
   background-image: url("./images/keesha-s-kitchen-PqG32DYCTM8-unsplash.jpg");
@@ -145,7 +136,6 @@ nav ul li a {
   background-color: #e55b00;
 }
 
-/* Additional Styling for Other Sections */
 #landing {
   text-align: center;
   padding: 100px 20px;
@@ -154,7 +144,7 @@ nav ul li a {
 }
 /* ---------about us------- */
 #about-us {
-  background-color: #ffd580; /* lighter orange color */
+  background-color: #ffd580;
   padding: 20px;
 }
 
@@ -225,7 +215,7 @@ nav ul li a {
 #readMoreBtn:hover {
   background-color: #ff9900;
 }
-/* dishes section */
+/*------------ dishes section --------------*/
 
 #dishes {
   padding: 50px 20px;
@@ -254,7 +244,7 @@ nav ul li a {
 .carousel-item {
   box-sizing: border-box;
   text-align: center;
-  padding: 10px; /* Add padding for spacing */
+  padding: 10px;
 }
 
 .carousel-item figure {
@@ -306,12 +296,11 @@ nav ul li a {
 #order {
   color: black;
   padding: 50px 20px;
-  background-color: #ff8000; /* Catchy background color */
+  background-color: #ff8000;
   text-align: center;
 }
 
 .order-content h2 {
-  /* color: #fff; */
   font-size: 24px;
   margin-bottom: 10px;
 }
@@ -327,7 +316,7 @@ nav ul li a {
   padding: 15px 30px;
   font-size: 18px;
   color: #fff;
-  background-color: #333; /* Contrast color for the button */
+  background-color: #333;
   border: none;
   border-radius: 5px;
   text-decoration: none;
@@ -335,7 +324,7 @@ nav ul li a {
 }
 
 .order-button:hover {
-  background-color: #555; /* Slightly lighter color on hover */
+  background-color: #555;
 }
 
 /* ------testimonial----- */
@@ -361,7 +350,7 @@ nav ul li a {
 .testimonial {
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced box shadow */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   padding: 20px;
   max-width: 600px;
   /* width: 100%; */
@@ -378,12 +367,12 @@ nav ul li a {
 .testimonial footer {
   margin-top: 10px;
   font-weight: bold;
-  color: #ff8000; /* Changed text color to orange */
-  background-color: transparent; /* Removed black background */
+  color: #ff8000;
+  background-color: transparent;
   font-size: 14px;
 }
 
-/* contact section */
+/* ---------contact section----------- */
 #contact {
   text-align: center;
   padding: 20px;
@@ -445,7 +434,7 @@ footer {
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-  gap: 10px; /* Add space between items */
+  gap: 10px;
 }
 
 .socials .social-icons i {
@@ -473,7 +462,7 @@ hr {
 
   .footer-left,
   .footer-right {
-    line-height: 1.5; /* Adjusted for better spacing */
+    line-height: 1.5;
   }
 
   .footer-right {
@@ -496,5 +485,14 @@ hr {
   }
   .footer-right {
     padding-left: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-control {
+    visibility: hidden;
+  }
+  .carousel {
+    overflow-x: scroll;
   }
 }
